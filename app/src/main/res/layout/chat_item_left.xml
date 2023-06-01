@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:padding="8dp"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:id="@+id/profile_image"
+        android:src="@mipmap/ic_launcher"/>
+
+    <TextView
+        android:id="@+id/time_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/grey"
+        android:textSize="12sp"
+        android:text=""
+        android:layout_marginLeft="@dimen/margin_10_dp"
+        android:layout_centerVertical="true"
+        android:layout_toRightOf="@id/show_message"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/profile_image"
+        android:id="@+id/show_message"
+        android:layout_centerVertical="true"
+        android:lineSpacingExtra="2dp"
+        android:paddingLeft="20dp"
+        android:paddingTop="4dp"
+        android:paddingRight="30dp"
+        android:paddingBottom="10dp"
+        android:text="Hi, How are you?"
+        android:textColor="@color/black"
+        android:textSize="14sp"
+        android:background="@drawable/background_left"/>
+
+        <ImageView
+            android:id="@+id/deleted_icon"
+            android:layout_width="14dp"
+            android:layout_height="14dp"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="14dp"
+            android:layout_marginLeft="14dp"
+            android:layout_marginTop="10dp"
+            android:layout_toEndOf="@+id/profile_image"
+            android:layout_toRightOf="@+id/profile_image"
+            android:scaleType="fitXY"
+            android:src="@mipmap/deleted_icon"
+            android:visibility="gone" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/txt_seen"
+        android:visibility="gone"
+        android:textColor="@color/white"
+        android:textSize="14sp"
+        android:layout_below="@id/show_message"/>
+
+    <ImageView
+        android:id="@+id/images"
+        android:layout_width="200dp"
+        android:layout_height="250dp"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="52dp"
+        android:background="@color/white"
+        android:lineSpacingExtra="2dp"
+        android:scaleType="fitXY"
+        android:text="Hi, How are you?" />
+    <TextView
+        android:id="@+id/file_name"
+        android:layout_width="138dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/images"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_marginStart="83dp"
+        android:layout_marginLeft="83dp"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:gravity="center"/>
+    </RelativeLayout>
+
+</RelativeLayout>

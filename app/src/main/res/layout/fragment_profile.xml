@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_height="match_parent"
+    android:layout_width="wrap_content" >
+
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="8dp"
+    android:background="@color/colorPrimary"
+    tools:context=".Fragments.ProfileFragment">
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="726dp"
+        android:background="@color/colorPrimary">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/colorPrimary"
+            android:isScrollContainer="true"
+            android:padding="8dp">
+
+            <TextView
+                android:id="@+id/profile_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Profile"
+                android:textColor="@color/white"
+                android:textStyle="bold" />
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/profile_image"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="50dp"
+                android:src="@drawable/profile_img" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/profile_image"
+                android:layout_marginLeft="-30dp"
+                android:layout_marginTop="-30dp"
+                android:layout_toRightOf="@id/profile_image"
+                android:src="@drawable/ic_plus" />
+
+            <ImageView
+                android:id="@+id/edit_image"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/profile_image"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="30dp"
+                android:padding="20dp"
+                android:src="@drawable/ic_edit" />
+
+            <TextView
+                android:id="@+id/name_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/profile_image"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="30dp"
+                android:text="Name"
+                android:textColor="@color/grey"
+                android:textSize="13sp" />
+
+            <EditText
+                android:id="@+id/username"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/name_tv"
+                android:layout_marginBottom="20dp"
+                android:layout_toLeftOf="@id/edit_image"
+                android:background="@null"
+                android:enabled="false"
+                android:maxLines="1"
+                android:padding="@dimen/padding_10_dp"
+                android:text="Username"
+                android:textColor="@color/white"
+                android:textCursorDrawable="@null"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/bio_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/username"
+                android:layout_marginLeft="10dp"
+                android:text="Bio"
+                android:textColor="@color/grey"
+                android:textSize="13sp" />
+
+            <EditText
+                android:id="@+id/bio_et"
+                android:layout_width="368dp"
+                android:layout_height="44dp"
+                android:layout_below="@id/bio_tv"
+                android:layout_centerHorizontal="true"
+                android:layout_marginStart="@dimen/margin_10_dp"
+                android:layout_marginLeft="@dimen/margin_10_dp"
+                android:layout_marginTop="@dimen/margin_10_dp"
+                android:layout_marginEnd="@dimen/margin_10_dp"
+                android:layout_marginRight="@dimen/margin_10_dp"
+                android:layout_marginBottom="@dimen/margin_10_dp"
+                android:background="@drawable/rounded_edittext"
+                android:enabled="false"
+                android:gravity="top"
+                android:hint="small information about you.."
+                android:maxLength="60"
+                android:maxLines="4"
+                android:minLines="4"
+                android:padding="@dimen/padding_10_dp"
+                android:text=""
+                android:textColor="@color/colorPrimary"
+                android:textCursorDrawable="@null"
+                android:textSize="17sp" />
+
+            <TextView
+                android:id="@+id/require_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/bio_et"
+                android:layout_marginLeft="10dp"
+                android:text="Requirements :"
+                android:textColor="@color/grey"
+                android:textSize="13sp" />
+
+            <EditText
+                android:id="@+id/requirement_et"
+                android:layout_width="361dp"
+                android:layout_height="80dp"
+                android:layout_below="@id/require_tv"
+                android:layout_centerHorizontal="true"
+                android:layout_marginStart="@dimen/margin_10_dp"
+                android:layout_marginLeft="@dimen/margin_10_dp"
+                android:layout_marginTop="@dimen/margin_10_dp"
+                android:layout_marginEnd="@dimen/margin_10_dp"
+                android:layout_marginRight="@dimen/margin_10_dp"
+                android:layout_marginBottom="@dimen/margin_10_dp"
+                android:background="@drawable/rounded_edittext"
+                android:enabled="false"
+                android:gravity="top"
+                android:hint="Your can specify your requirements here..."
+                android:maxLength="600"
+                android:maxLines="4"
+                android:minLines="4"
+                android:padding="@dimen/padding_10_dp"
+                android:text=""
+                android:textColor="@color/colorPrimary"
+                android:textCursorDrawable="@null"
+                android:textSize="17sp" />
+
+            <Button
+                android:id="@+id/save_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/requirement_et"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/margin_30_dp"
+                android:layout_marginBottom="@dimen/margin_20_dp"
+                android:background="@drawable/button_bg"
+                android:backgroundTint="@color/white"
+                android:paddingLeft="@dimen/padding_50_dp"
+                android:paddingTop="@dimen/padding_10_dp"
+                android:paddingRight="@dimen/padding_50_dp"
+                android:paddingBottom="@dimen/padding_10_dp"
+                android:text="Save"
+                android:textAllCaps="false"
+                android:textColor="@color/colorPrimary"
+                android:visibility="gone" />
+
+
+        </RelativeLayout>
+
+
+    </android.support.v7.widget.CardView>
+
+</RelativeLayout>
+</ScrollView>
+

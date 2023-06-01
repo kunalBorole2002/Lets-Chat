@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary"
+    tools:context=".MessageActivity">
+
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/bar_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/padding_10_dp"
+            android:background="@color/colorPrimaryDark"
+            android:theme="@style/Base.ThemeOverlay.AppCompat.Dark.ActionBar"
+            app:popupTheme="@style/MenuStyle">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:id="@+id/profile_image"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/username"
+                android:textSize="22sp"
+                android:layout_marginLeft="25dp"
+                android:textColor="#fff"
+                android:textStyle="bold"
+                android:layout_marginStart="25dp" />
+
+        </android.support.v7.widget.Toolbar>
+
+    </android.support.design.widget.AppBarLayout>
+
+    <RelativeLayout
+        android:layout_width="10dp"
+        android:layout_height="10dp">
+
+    </RelativeLayout>
+    <RelativeLayout
+        android:visibility="gone"
+        android:id="@+id/requirement_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:padding="8dp"
+        android:layout_below="@id/bar_layout">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:id="@+id/requirement_tv"
+            android:layout_marginLeft="@dimen/margin_10_dp"
+            android:layout_marginRight="@dimen/margin_10_dp"
+            android:padding="6dp"
+            android:clickable="true"
+            android:text="Your Friend Need Something please ask him"
+            android:textColor="@color/black"
+            android:textSize="14sp"
+            android:background="@drawable/background_requirement"/>
+
+    </RelativeLayout>
+    <android.support.v7.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/recycler_view"
+        android:layout_below="@id/requirement_layout"
+        android:layout_above="@id/bottom"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:id="@+id/bottom"
+        android:background="@color/white"
+        android:paddingTop="@dimen/margin_10_dp"
+        android:paddingBottom="@dimen/margin_10_dp"
+        android:paddingRight="@dimen/margin_10_dp"
+        android:layout_alignParentBottom="true"
+        android:layout_height="wrap_content">
+
+        <EditText
+            android:id="@+id/text_send"
+            android:layout_width="293dp"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="20dp"
+            android:layout_toLeftOf="@id/btn_send"
+            android:background="@null"
+            android:hint="Type a message..."
+            android:padding="@dimen/padding_10_dp"
+            android:textColor="@color/black_shade"
+            android:textColorHint="@color/black_shade"
+            android:textSize="16sp" />
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/padding_10_dp"
+            android:background="@drawable/ic_send"
+            android:layout_centerVertical="true"
+            android:id="@+id/btn_send"
+            android:backgroundTint="@color/colorPrimary"
+            android:layout_alignParentRight="true" />
+
+        <ImageButton
+            android:id="@+id/send_files"
+            android:layout_width="54dp"
+            android:layout_height="50dp"
+            android:padding="@dimen/padding_10_dp"
+            android:backgroundTint="#00000000"
+            android:scaleType="centerCrop"
+
+            app:srcCompat="@mipmap/image" />
+
+    </RelativeLayout>
+
+</RelativeLayout>
